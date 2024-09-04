@@ -1,26 +1,26 @@
+// src/App.tsx
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Map from './Map';
 
-function App() {
+const places = [
+  { id: 1, name: 'Bageri Norrmalm', latitude: 59.3364848, longitude: 18.0582029, specialty: 'Bäst Bang for the Buck', totalScore: 8, price: 35, breadScore: 7, condimentScore: 8, size: 10, environment: 8 },
+  { id: 3, name: 'Espresso House', latitude: 59.3365668, longitude: 18.0588724, specialty: 'Det är vad det är', totalScore: 5, price: 39, breadScore: 5, condimentScore: 5, size: 6, environment: 5  },
+  { id: 4, name: 'Caffé Nero', latitude: 59.33590662133987, longitude: 18.05950123923368, specialty: 'Stabil frukostfralla', totalScore: 7, price: 39, breadScore: 7, condimentScore: 7, size: 7, environment: 5  },
+  { id: 5, name: 'S:T Paul', latitude: 59.0581342, longitude: 18.0586932, specialty: 'Bra, men lite pricy', totalScore: 6, price: 55, breadScore: 8, condimentScore: 6, size: 7, environment: 7  },
+  { id: 6, name: 'Le Violin Dingue', latitude: 59.3362599, longitude: 18.06137398, specialty: 'Stans bästa Ostfralla', totalScore: 8, price: 45, breadScore: 9, condimentScore: 7, size: 8, environment: 8  },
+  { id: 7, name: 'Fabrique', latitude: 59.33637208709206, longitude: 18.06241233164948, specialty: 'Kvalitétsfralla, men pricy', totalScore: 7, price: 55, breadScore: 8, condimentScore: 8, size: 8, environment: 7  },
+  { id: 8, name: 'Fabrique', latitude: 59.33814656912433, longitude: 18.057251111414782, specialty: 'Kvalitétsfralla, men pricy', totalScore: 7, price: 55, breadScore: 8, condimentScore: 8, size: 8, environment: 7  },
+  { id: 9, name: 'Gast', latitude: 59.33974702638544, longitude: 18.056673049755453, specialty: 'Stans bästa Ost- & Skinkfralla', totalScore: 9, price: 55, breadScore: 10, condimentScore: 9, size: 8, environment: 8  },
+
+];
+
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Frukostfrallan</h1>
+      <Map places={places} />
     </div>
   );
-}
+};
 
 export default App;
