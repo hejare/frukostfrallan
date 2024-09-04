@@ -28,6 +28,21 @@ p {
   margin-bottom: 1rem;
 }
 
+.nomb {
+  margin: 0;
+}
+
 .bold {
   font-weight: bold;
+}
+
+.box {
+  padding: 0;
+}
+
+.bg {
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }

@@ -42,7 +42,7 @@ const Map: React.FC<MapProps> = ({ places }) => {
 
       // Initialize the map
       const map = new google.maps.Map(mapRef.current as HTMLDivElement, {
-        center: { lat: 59.3366981, lng: 18.0586932 }, // Default to San Francisco
+        center: { lat: 59.3376981, lng: 18.0586932 }, // Default to San Francisco
         zoom: 16,
         styles: mapStyles,
       });
@@ -57,6 +57,7 @@ const Map: React.FC<MapProps> = ({ places }) => {
           map: map,
           title: place.name,
           label: {
+            className: 'bg',
             text: place.name + ' - ' + place.price + 'kr',
             color: '#000', // Text color
             fontSize: '14px', // Font size
@@ -66,16 +67,16 @@ const Map: React.FC<MapProps> = ({ places }) => {
 
         const setInfoWindow = () => {
           // Set the content of the info window
+          infoWindow.setHeaderDisabled(true)
           infoWindow.setContent(`
-            <div>
-              <h2>${place.name}</h2>
-              <p class="bold">${place.totalScore}/10 - ${place.price}kr</p>
-              <p class="bold mb">${place.specialty}</p>
+            <div class="box" ´>
+              <h2 class="nomb">${place.name}</h2>
+              <p class="">${place.specialty}</p>
+              <p class="bold mb">${place.totalScore}/10 - ${place.price}kr</p>
               <p>Bröd: ${place.breadScore}/10</p>
               <p>Pålägg: ${place.condimentScore}/10</p>
               <p>Storlek: ${place.size}/10</p>
               <p>Miljö: ${place.environment}/10</p>
-
             </div>
           `);
           // Open the info window on the marker
