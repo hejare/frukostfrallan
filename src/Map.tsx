@@ -101,7 +101,7 @@ const Map: React.FC<MapProps> = ({ places }) => {
     };
   }, [places]);
 
-  return <div ref={mapRef} style={{ width: '80vw', height: '80vh' }} />;
+  return <div ref={mapRef} style={{ width: '90vw', height: '80vh' }} />;
 };
 
 export default Map;
