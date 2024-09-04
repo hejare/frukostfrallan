@@ -64,8 +64,7 @@ const Map: React.FC<MapProps> = ({ places }) => {
           }
         });
 
-        // Add a click listener to each marker to display an info window
-        marker.addListener('mouseover', () => {
+        const setInfoWindow = () => {
           // Set the content of the info window
           infoWindow.setContent(`
             <div>
@@ -81,7 +80,11 @@ const Map: React.FC<MapProps> = ({ places }) => {
           `);
           // Open the info window on the marker
           infoWindow.open(map, marker);
-        });
+        };
+
+        // Add a click listener to each marker to display an info window
+        marker.addListener('mouseover', setInfoWindow);
+        marker.addListener('onclick', setInfoWindow);
 
         // Add a click listener to each marker to display an info window
         marker.addListener('mouseout', () => {
