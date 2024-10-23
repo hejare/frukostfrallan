@@ -17,7 +17,7 @@ const places = [
 const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>Frukostfrallan</h1>
+      <h1>Frukostfrallan - Din Fralla på Norrmalm</h1>
       <Map places={places} />
     </div>
   );
