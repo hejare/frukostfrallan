@@ -11,7 +11,7 @@ const places = [
   { id: 7, name: 'Fabrique', latitude: 59.33637208709206, longitude: 18.06241233164948, specialty: 'Kvalitétsfralla, men pricy', totalScore: 7, price: 55, breadScore: 8, condimentScore: 8, size: 8, environment: 7  },
   { id: 8, name: 'Fabrique', latitude: 59.33814656912433, longitude: 18.057251111414782, specialty: 'Kvalitétsfralla, men pricy', totalScore: 7, price: 55, breadScore: 8, condimentScore: 8, size: 8, environment: 7  },
   { id: 9, name: 'Gast', latitude: 59.33974702638544, longitude: 18.056673049755453, specialty: 'Stans bästa Ost- & Skinkfralla', totalScore: 9, price: 55, breadScore: 10, condimentScore: 9, size: 8, environment: 8  },
-  { id: 10, name: 'Vete-Katten', latitude: 59.3337118, longitude: 18.056100, specialty: 'Old but mid', totalScore: 6, price: 48, breadScore: 6, condimentScore: 5, size: 7, environment: 8  },
+  { id: 10, name: 'Vete-Katten', latitude: 59.3341503, longitude: 18.0582894, specialty: 'Old but mid', totalScore: 6, price: 48, breadScore: 6, condimentScore: 5, size: 7, environment: 8  },
 ];
 
 const App: React.FC = () => {
